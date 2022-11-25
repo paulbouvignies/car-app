@@ -1,7 +1,6 @@
 
 import React from "react";
 
-import "../style/HeroBanner.css";
 
 type Props = {
   cover: string;

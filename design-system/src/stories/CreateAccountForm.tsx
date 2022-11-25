@@ -1,7 +1,6 @@
 
 import React from "react";
 
-import "../style/CreateAccountForm.css";
 import {BoolInput} from "./BoolInput";
 import {BaseInput} from "./BaseInput";
 import {Button} from "./Button";

@@ -1,7 +1,6 @@
 
 import React from "react";
 
-import "../style/BaseInput.css";
 
 
 type Props = {

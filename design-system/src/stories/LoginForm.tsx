@@ -1,7 +1,6 @@
 
 import React from "react";
 
-import "../style/LoginForm.css";
 import {BaseInput} from "./BaseInput";
 import {Button} from "./Button";
 

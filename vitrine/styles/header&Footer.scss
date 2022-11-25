@@ -1,0 +1,11 @@
+@import "./designSystem.scss";
+
+.header{
+  width: 100%;
+  @include flex(row, space-between, center);
+}
+
+.footer{
+  width: 100%;
+  @include flex(row, space-between, center);
+}

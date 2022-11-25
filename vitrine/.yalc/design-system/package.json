@@ -1,0 +1,40 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "Made with create-react-library",
+  "author": "paulbouvignies",
+  "license": "MIT",
+  "repository": "paulbouvignies/design-system",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.tsx",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
+    "predeploy": "cd example && npm install && npm run build",
+    "deploy": "gh-pages -d example/build",
+    "storybook": "start-storybook -p 6006 && npm run watch",
+    "build-storybook": "build-storybook",
+    "yalc:build": "rm -rf dist/ && npm run build && npm run sass:build && npm run export:ds && yalc publish --private",
+    "sass:build": "sass src/style/index.scss dist/index.css",
+    "export:ds": " cp src/style/designSystem.scss dist/designSystem.scss"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "yalc": "^1.0.0-pre.53"
+  },
+  "yalcSig": "084cbe9b573f12f96760e495a6e0328b"
+}

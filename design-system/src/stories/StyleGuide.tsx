@@ -1,7 +1,7 @@
 
 import React from "react";
-
 import "../style/StyleGuide.css"
+
 
 type Props = {
   category: string;

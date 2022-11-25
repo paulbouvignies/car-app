@@ -1,7 +1,6 @@
 
 import React from "react";
 
-import '../style/Cta.css'
 
 type Props = {
   label: string;

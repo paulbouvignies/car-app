@@ -2,7 +2,7 @@
 import {LoginForm} from "./LoginForm";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import React from "react";
-
+import '../style/index.css'
 export default {
   title: 'Component Web/Form',
   component: LoginForm,

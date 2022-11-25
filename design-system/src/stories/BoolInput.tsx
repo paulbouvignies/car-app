@@ -1,7 +1,6 @@
 
 import React from "react";
 
-import "../style/BoolInput.css";
 
 type Props = {
   label?: string;

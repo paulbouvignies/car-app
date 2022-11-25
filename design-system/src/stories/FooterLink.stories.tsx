@@ -2,7 +2,7 @@
 import {FooterLink} from "./FooterLink";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import React from "react";
-
+import '../style/index.css'
 export default {
   title: 'Component Web/Link',
   component: FooterLink,

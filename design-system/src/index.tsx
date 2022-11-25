@@ -1,10 +1,9 @@
-import * as React from 'react'
-import styles from './styles.module.css'
 
-interface Props {
-  text: string
-}
+export { BackLink } from './stories/BackLink'
+export { BaseInput } from './stories/BaseInput'
+export { BigLink } from './stories/BigLink'
+export { BoolInput } from './stories/BoolInput'
+export { Button } from './stories/Button'
+export { FooterLink } from './stories/FooterLink'
+export { HeroBanner } from './stories/HeroBanner'
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}

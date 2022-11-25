@@ -1,78 +1,17 @@
-@import "reset.css";
-/**************************
-// COLORS
-**************************/
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Abel&display=swap");
-::selection {
-  background-color: #C00000;
-  color: #ffffff;
-}
+/* Error: Undefined mixin.
+ *   ,
+ * 9 |     @include flex(column, center, flex-start);
+ *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   src/style/CreateAccountForm.scss 9:5  root stylesheet */
 
-/**************************
-// FONT
-**************************/
-h1 {
-  font-family: "Roboto", sans-serif;
-  color: #C00000;
-  font-size: 19px;
-  font-weight: 400;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a   \2577 \a 9 \2502      @include flex(column, center, flex-start);\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src/style/CreateAccountForm.scss 9:5  root stylesheet";
 }
-
-/**************************
-// MIXINS
-**************************/
-.createAccount {
-  max-width: 710px;
-}
-.createAccount__title {
-  margin-bottom: 8px;
-}
-.createAccount__form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.createAccount__form__role {
-  font-family: "Abel", sans-serif;
-  color: #000;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 8px;
-}
-.createAccount__form__role__options {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 31px;
-}
-.createAccount__form__role__options .boolInput:first-of-type {
-  margin-right: 66px;
-}
-.createAccount__form__user {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-.createAccount__form__user .baseInput {
-  width: calc(50% - 12px);
-}
-.createAccount__form__user .baseInput:nth-child(2n+1) {
-  margin-right: 24px;
-}
-.createAccount__form__user .baseInput:nth-child(1), .createAccount__form__user .baseInput:nth-child(2) {
-  margin-bottom: 16px;
-}
-.createAccount__form > .boolInput {
-  margin-bottom: 33px;
-}
-.createAccount__form .cta {
-  width: calc(50% - 12px);
-  align-self: end;
-}
-
-/*# sourceMappingURL=CreateAccountForm.css.map */

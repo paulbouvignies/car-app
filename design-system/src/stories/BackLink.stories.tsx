@@ -3,6 +3,8 @@ import {BackLink} from "./BackLink";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import React from "react";
 
+import '../style/index.css'
+
 export default {
   title: 'Component Web/Link',
   component: BackLink,

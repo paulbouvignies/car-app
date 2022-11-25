@@ -2,7 +2,7 @@
 import {HeroBanner} from "./HeroBanner";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import React from "react";
-
+import '../style/index.css'
 export default {
   title: 'Component Web/Hero Banner',
   component: HeroBanner,
