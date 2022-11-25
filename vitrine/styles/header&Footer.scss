@@ -3,9 +3,28 @@
 .header{
   width: 100%;
   @include flex(row, space-between, center);
+  .cta--boxed{
+    margin-right: 9px;
+  }
 }
 
 .footer{
   width: 100%;
-  @include flex(row, space-between, center);
+  padding:  24px 74px;
+  background-color: $primary-black;
+  @include flex(column, flex-start, flex-start);
+  .cta--footerType{
+    color: $primary-white;
+    &:nth-child(2){
+      margin: 24px 0;
+    }
+  }
+  &__credential{
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: 400;
+    color: $primary-white;
+    width: 100%;
+    text-align: center;
+  }
 }

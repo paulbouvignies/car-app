@@ -29,13 +29,32 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
+.header .cta--boxed {
+  margin-right: 9px;
+}
 
 .footer {
   width: 100%;
+  padding: 24px 74px;
+  background-color: #000;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer .cta--footerType {
+  color: #ffffff;
+}
+.footer .cta--footerType:nth-child(2) {
+  margin: 24px 0;
+}
+.footer__credential {
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=header&Footer.css.map */

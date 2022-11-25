@@ -1,4 +1,9 @@
 
-body{
-  background-color: rgba(23, 25, 35, 0.68);
+
+.app{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center ;
 }
