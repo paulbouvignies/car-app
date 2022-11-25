@@ -1,0 +1,65 @@
+
+@import './designSystem';
+
+.cta{
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  &--boxed,
+  &--boxed--primary,
+  &--boxed--secondary,{
+    color: $primary-white;
+    border: 1px solid $primary-red;
+    transition: all .3s ease;
+    padding: 12px;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 700;
+    &::after{
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $primary-red;
+      transition: all .3s ease;
+    }
+    &:hover{
+      color: $primary-red;
+      &::after{
+        height: 0;
+      }
+    }
+  }
+  &--boxed--secondary{
+    border: 1px solid $primary-black;
+    &::after{
+      background-color: $primary-black;
+    }
+    &:hover{
+      color: $primary-black;
+      &::after{
+        height: 0;
+      }
+    }
+  }
+  &--footerType{
+    text-decoration: underline;
+    @include underlinedLinkFont;
+  }
+  &--goBack{
+    font-family: $primary-font;;
+    font-size: 16px;
+    font-weight: bold;
+    @include flex(row, start, center);
+    &__arrow{
+      margin-right: 6px;
+      color: $primary-red;
+      font-size: 18px;
+    }
+  }
+
+}

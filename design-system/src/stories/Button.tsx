@@ -1,48 +1,38 @@
-import React from 'react';
-import './button.css';
 
-interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
+import React from "react";
+
+type Props = {
+  type?: 'button' | 'submit';
   label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
+  variant?: 'primary' | 'secondary';
+  onclick?: () => void;
+  onsubmit?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
-};
+export const Button:React.FC<Props> = (props) => {
+  const { type = 'button', label, variant = "primary" } = props;
+  if (type === "submit"){
+    return(
+      <button
+        className={ 'cta cta--boxed--'+variant }
+        type={type}
+        onSubmit={props.onsubmit}
+      >
+        {label}
+      </button>
+    )
+  }
+  else {
+    return (
+      <button
+        className={ 'cta cta--boxed--'+variant }
+        type={type}
+        onClick={props.onclick}
+      >
+        {label}
+      </button>
+    )
+
+  }
+
+}

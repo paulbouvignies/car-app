@@ -1,0 +1,19 @@
+
+@import './designSystem';
+
+.boolInput{
+  @include flex(row, flex-start, center);
+  &__label{
+    @include textFont;
+  }
+  &__input{
+    accent-color: $primary-black;
+    width: 16px;
+    height: 16px;
+    font-size: 30px;
+    margin-right: 10px;
+    &[type="checkbox"]{
+      margin-right: 16px;
+    }
+  }
+}

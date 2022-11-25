@@ -1,0 +1,7 @@
+
+@import "./designSystem";
+
+.header{
+  width: 100%;
+  @include flex(row, space-between, center);
+}

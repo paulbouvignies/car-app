@@ -1,0 +1,25 @@
+
+@import './designSystem';
+
+.login{
+  max-width: 710px;
+  &__title{
+    margin-bottom: 24px;
+  }
+  &__form{
+    @include flex(column, center, center);
+
+    &__user{
+      width: 100%;
+      margin-bottom: 48px;
+      .baseInput{
+        &:nth-child(1){
+          margin-bottom: 24px;
+        }
+      }
+    }
+    .cta{
+      width: 100%;
+    }
+  }
+}

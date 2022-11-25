@@ -1,0 +1,63 @@
+@import "reset.css";
+/**************************
+// COLORS
+**************************/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel&display=swap");
+::selection {
+  background-color: #C00000;
+  color: #ffffff;
+}
+
+/**************************
+// FONT
+**************************/
+h1 {
+  font-family: "Roboto", sans-serif;
+  color: #C00000;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+/**************************
+// MIXINS
+**************************/
+.baseInput {
+  position: relative;
+  padding: 16px;
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.baseInput::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+.baseInput--focus::after {
+  width: 100%;
+}
+.baseInput__label {
+  font-family: "Roboto", sans-serif;
+  color: #2D2D2D;
+  font-size: 13px;
+  font-weight: 400;
+}
+.baseInput__input {
+  width: 100%;
+  font-family: "Abel", sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  color: #C00000;
+}
+
+/*# sourceMappingURL=BaseInput.css.map */

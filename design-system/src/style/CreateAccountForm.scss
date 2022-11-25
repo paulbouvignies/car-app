@@ -1,0 +1,45 @@
+
+@import './designSystem';
+
+.createAccount{
+  max-width: 710px;
+  &__title{
+    margin-bottom: 8px;
+  }
+  &__form{
+    @include flex(column, center, flex-start);
+    &__role{
+      @include textFont;
+      margin-bottom: 8px;
+      &__options{
+        @include flex(row, flex-start, center);
+        margin-bottom: 31px;
+        .boolInput:first-of-type{
+          margin-right: 66px ;
+        }
+      }
+    }
+    &__user{
+      @include flex(row, flex-start, flex-start);
+      flex-wrap: wrap;
+      .baseInput{
+        width: calc(50% - 12px);
+        &:nth-child(2n+1){
+          margin-right: 24px;
+        }
+        &:nth-child(1),
+        &:nth-child(2){
+          margin-bottom: 16px;
+        }
+      }
+    }
+    & > .boolInput{
+      margin-bottom: 33px;
+    }
+    .cta{
+      width: calc(50% - 12px);
+      align-self: end;
+    }
+  }
+
+}

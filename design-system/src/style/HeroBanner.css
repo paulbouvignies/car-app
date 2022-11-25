@@ -1,0 +1,68 @@
+@import "reset.css";
+/**************************
+// COLORS
+**************************/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel&display=swap");
+::selection {
+  background-color: #C00000;
+  color: #ffffff;
+}
+
+/**************************
+// FONT
+**************************/
+h1 {
+  font-family: "Roboto", sans-serif;
+  color: #C00000;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+/**************************
+// MIXINS
+**************************/
+.heroBanner {
+  position: relative;
+  width: 100%;
+  height: 424px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.heroBanner__cover {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+.heroBanner__content {
+  position: relative;
+  max-width: 795px;
+  z-index: 2;
+  background-color: #ffffff;
+  padding: 16px 43px;
+  font-family: "Abel", sans-serif;
+  color: #000;
+  font-size: 18px;
+  line-height: 25px;
+}
+.heroBanner__content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 94%;
+  right: 3%;
+  height: 1px;
+  background-color: #C00000;
+}
+.heroBanner__content__arrow {
+  color: #C00000;
+}
+
+/*# sourceMappingURL=HeroBanner.css.map */

@@ -1,0 +1,35 @@
+@import './designSystem';
+
+
+
+.baseInput{
+  position: relative;
+  padding: 16px;
+  background-color: $secondary-white;
+  &::after{
+    content: '';
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: $primary-black;
+    transition: all 0.3s ease;
+  }
+  &--focus{
+    &::after{
+      width: 100%;
+    }
+  }
+  @include flex(column, flex-start, flex-start);
+  &__label{
+    @include legendFont;
+  }
+  &__input{
+    width: 100%;
+    @include textFont;
+    color: $primary-red ;
+
+  }
+}
