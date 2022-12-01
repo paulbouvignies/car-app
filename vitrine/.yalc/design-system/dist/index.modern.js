@@ -41,12 +41,12 @@ var BaseInput = function BaseInput(props) {
     setIsFocus = _React$useState[1];
   console.log(isFocus);
   return React.createElement("div", {
-    className: "baseInput  " + (isFocus ? 'baseInput--focus' : '')
+    className: "baseInput" + (isFocus ? 'baseInput--focus' : '')
   }, React.createElement("label", {
     className: 'baseInput__label',
     htmlFor: id
   }, label), React.createElement("input", Object.assign({
-    className: "baseInput__input",
+    className: 'aseInput__input',
     id: id,
     onFocus: function onFocus(_e) {
       setIsFocus(true);

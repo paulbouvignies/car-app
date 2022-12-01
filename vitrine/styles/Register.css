@@ -37,8 +37,51 @@ h1 {
   }
 }
 .registerPage .createAccount {
+  max-width: 710px;
   padding: 22px;
   margin: 32px 0 80px 0;
+}
+.registerPage .createAccount__title {
+  margin-bottom: 8px;
+}
+.registerPage .createAccount__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.registerPage .createAccount__form__role {
+  font-family: "Abel", sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.registerPage .createAccount__form__role__options {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 31px;
+}
+.registerPage .createAccount__form__role__options .boolInput:first-of-type {
+  margin-right: 66px;
+}
+.registerPage .createAccount__form__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.registerPage .createAccount__form__user .baseInput {
+  width: calc(50% - 12px);
+}
+.registerPage .createAccount__form__user .baseInput:nth-child(2n+1) {
+  margin-right: 24px;
+}
+.registerPage .createAccount__form__user .baseInput:nth-child(1), .registerPage .createAccount__form__user .baseInput:nth-child(2) {
+  margin-bottom: 16px;
 }
 @media (max-width: 780px) {
   .registerPage .createAccount__form__user {
@@ -50,6 +93,18 @@ h1 {
     margin: 0;
     margin-bottom: 16px;
   }
+  .registerPage .createAccount__form__user .cta {
+    width: 100%;
+  }
+}
+.registerPage .createAccount__form > .boolInput {
+  margin-bottom: 33px;
+}
+.registerPage .createAccount__form .cta {
+  width: calc(50% - 12px);
+  align-self: end;
+}
+@media (max-width: 780px) {
   .registerPage .createAccount__form .cta {
     width: 100%;
   }

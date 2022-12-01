@@ -31,7 +31,7 @@ export const BaseInput:React.FC<Props> = (props) => {
   console.log(isFocus)
 
   return (
-    <div className={ `baseInput  ${isFocus ? 'baseInput--focus' : ''}` }>
+    <div className={ `baseInput${isFocus ? 'baseInput--focus' : ''}` }>
       <label
         className='baseInput__label'
         htmlFor={id}
@@ -39,7 +39,7 @@ export const BaseInput:React.FC<Props> = (props) => {
         {label}
       </label>
       <input
-        className={`baseInput__input`}
+        className='aseInput__input'
         id={id}
         onFocus={(_e) => { setIsFocus(true) }}
         onBlur={(_e) => { setIsFocus(false) }}
