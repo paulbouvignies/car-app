@@ -8,6 +8,7 @@ import "../styles/global.css";
 
 import "../styles/header&Footer.css";
 import "../styles/Login.css";
+import "../styles/Register.css";
 
 
 export default function App({ Component, pageProps }: AppProps) {

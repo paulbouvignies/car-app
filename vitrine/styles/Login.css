@@ -27,12 +27,37 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: calc(100vh - 225px);
+  background: #F9F9F9;
 }
-.loginPage .heroBanner {
+@media (max-width: 780px) {
+  .loginPage {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.loginPage__link {
   width: 100%;
+  max-width: 358px;
+  margin-bottom: 16px;
 }
-.loginPage .createAccount {
-  margin: 32px 0 80px 0;
+.loginPage__center {
+  width: 100%;
+  padding: 16px 9px;
+  background-color: white;
+  max-width: 358px;
+}
+.loginPage__center__form {
+  padding: 24px 7px 0 7px;
+}
+.loginPage__center__form .baseInput:nth-child(2) {
+  margin: 16px 0 24px 0;
+}
+.loginPage__center__form .cta {
+  width: 100%;
 }
 
 /*# sourceMappingURL=Login.css.map */

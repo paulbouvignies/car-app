@@ -5,6 +5,7 @@ declare type Props = {
     required?: boolean;
     readonly?: boolean;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    checked?: boolean;
 };
 export declare const BoolInput: React.FC<Props>;
 export {};

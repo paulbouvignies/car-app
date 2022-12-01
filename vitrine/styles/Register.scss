@@ -1,0 +1,70 @@
+@import "./designSystem.scss";
+
+.registerPage{
+  @include flex(column, center, center);
+  .heroBanner{
+    width: 100%;
+    @media (max-width: 780px) {
+      &__content{
+        margin-left: 60px;
+      }
+    }
+  }
+  .createAccount{
+    padding: 22px;
+    margin: 32px 0 80px 0;
+    &__form {
+      @media (max-width: 780px) {
+        &__user{
+          flex-direction: column;
+          width: 100%;
+          .baseInput{
+            width: 100%;
+            margin: 0;
+            margin-bottom: 16px;
+          }
+        }
+        .cta{
+            width: 100%;
+        }
+      }
+      &__error {
+        font-family: $primary-font;
+        margin: 20px 0;
+        padding: 10px;
+        color: white;
+        width: 100%;
+        background-color: #C00000FF;
+        font-weight: 200;
+        &__firstLabel{
+          border-bottom: 1px solid white;
+          margin-bottom: 10px;
+        }
+        span{
+          font-weight: 900;
+        }
+      }
+    }
+    &__registered{
+      background: #F9F9F9;
+      padding: 16px;
+      p{
+        @include textFont
+      }
+      &__download{
+        margin: 27px 0;
+        @include flex();
+        svg:not(:last-child){
+          margin-right: 56px;
+        }
+        @media (max-width: 780px) {
+          flex-direction: column;
+          svg:not(:last-child){
+            margin-right: 0;
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -22,19 +22,19 @@ const generateUUID = ():string => {
   });
 }
 
-export const BaseInput:React.FC<Props> = (props) => {
-  const { type, placeholder, label, required, readonly } = props;
-  const id = generateUUID();
-
-  const [value, setValue] = React.useState(props.value || "");
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
-    setValue(event.target.value);
-    if (props.onChange) {
-      props.onChange(event);
-    }
+const style = (e:any,state: string) => {
+  console.log(e.target.parentElement, state)
+  if (state === 'focus'){
+    e.target.parentElement.classList.add('baseInput--focus')
   }
+  if (state === 'blur'){
+    e.target.parentElement.classList.remove('baseInput--focus')
+  }
+}
+
+export const BaseInput:React.FC<Props> = (props) => {
+  const { type, placeholder, label, required, readonly, ...rest } = props;
+  const id = generateUUID();
 
   return (
     <div className={ 'baseInput' }>
@@ -51,11 +51,9 @@ export const BaseInput:React.FC<Props> = (props) => {
         placeholder={placeholder || ""}
         required={required || false}
         readOnly={readonly || false}
-        value={value}
-        onChange={(e) => { handleChange(e)} }
-        //onFocus={() => { setIsFocused(true) }}
-        //onBlur={() => { setIsFocused(false) ; }}
-        //onChange={(e) => { handleChange(e) }}
+        {...rest}
+        onFocus={(e) => { style(e,'focus') }}
+        onBlur={(e) => { style(e, 'blur') }}
       />
     </div>
   );

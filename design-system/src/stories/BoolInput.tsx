@@ -8,6 +8,7 @@ type Props = {
   required?: boolean;
   readonly?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  checked?: boolean;
 }
 
 
@@ -22,7 +23,7 @@ const generateUUID = ():string => {
 
 
 export const BoolInput:React.FC<Props> = (props) => {
-  const { label, type, required, readonly } = props;
+  const { label, type, required, readonly, ...rest } = props;
   const id = generateUUID();
   return (
     <div className='boolInput'>
@@ -32,7 +33,7 @@ export const BoolInput:React.FC<Props> = (props) => {
         type={type}
         required={required || false}
         readOnly={readonly || false}
-        onChange={props.onChange}
+        {...rest}
       />
       {label && <label className='boolInput__label' htmlFor={id}>{label}</label>}
     </div>

@@ -6,6 +6,7 @@
   background-color: transparent;
   display: inline-block;
   cursor: pointer;
+  z-index: 3;
   &--boxed,
   &--boxed--primary,
   &--boxed--secondary,{

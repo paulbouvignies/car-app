@@ -59,10 +59,10 @@ h1 {
   position: absolute;
   display: flex;
   bottom: 0;
-  right: 0;
+  left: 0;
   width: 0;
   height: 2px;
-  background-color: #000;
+  background-color: #C00000;
   transition: all 0.3s ease;
 }
 .baseInput--focus::after {
@@ -73,6 +73,7 @@ h1 {
   color: #2D2D2D;
   font-size: 13px;
   font-weight: 400;
+  color: rgba(0, 0, 0, 0.5019607843);
 }
 .baseInput__input {
   width: 100%;
@@ -111,6 +112,7 @@ h1 {
   background-color: transparent;
   display: inline-block;
   cursor: pointer;
+  z-index: 3;
 }
 .cta--boxed, .cta--boxed--primary, .cta--boxed--secondary {
   color: #ffffff;
@@ -249,6 +251,20 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media (max-width: 780px) {
+  .createAccount__form__user {
+    flex-direction: column;
+    width: 100%;
+  }
+  .createAccount__form__user .baseInput {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  .createAccount__form .cta {
+    width: 100%;
+  }
 }
 .createAccount__form__role {
   font-family: "Abel", sans-serif;

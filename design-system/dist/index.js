@@ -15,6 +15,20 @@ var BackLink = function BackLink(props) {
   }, "\u2190"), label);
 };
 
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+
+var _excluded = ["type", "placeholder", "label", "required", "readonly"];
 var generateUUID = function generateUUID() {
   return "xx-4x-yxx".replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0,
@@ -22,40 +36,43 @@ var generateUUID = function generateUUID() {
     return v.toString(16);
   });
 };
+var style = function style(e, state) {
+  console.log(e.target.parentElement, state);
+  if (state === 'focus') {
+    e.target.parentElement.classList.add('baseInput--focus');
+  }
+  if (state === 'blur') {
+    e.target.parentElement.classList.remove('baseInput--focus');
+  }
+};
 var BaseInput = function BaseInput(props) {
   var type = props.type,
     placeholder = props.placeholder,
     label = props.label,
     required = props.required,
-    readonly = props.readonly;
+    readonly = props.readonly,
+    rest = _objectWithoutPropertiesLoose(props, _excluded);
   var id = generateUUID();
-  var _React$useState = React.useState(props.value || ""),
-    value = _React$useState[0],
-    setValue = _React$useState[1];
-  var handleChange = function handleChange(event) {
-    console.log(event.target.value);
-    setValue(event.target.value);
-    if (props.onChange) {
-      props.onChange(event);
-    }
-  };
   return React.createElement("div", {
     className: 'baseInput'
   }, React.createElement("label", {
     className: 'baseInput__label',
     htmlFor: id
-  }, label), React.createElement("input", {
+  }, label), React.createElement("input", Object.assign({
     className: 'baseInput__input',
     id: id,
     type: type,
     placeholder: placeholder || "",
     required: required || false,
-    readOnly: readonly || false,
-    value: value,
-    onChange: function onChange(e) {
-      handleChange(e);
+    readOnly: readonly || false
+  }, rest, {
+    onFocus: function onFocus(e) {
+      style(e, 'focus');
+    },
+    onBlur: function onBlur(e) {
+      style(e, 'blur');
     }
-  }));
+  })));
 };
 
 var BigLink = function BigLink(props) {
@@ -72,6 +89,7 @@ var BigLink = function BigLink(props) {
   }, label);
 };
 
+var _excluded$1 = ["label", "type", "required", "readonly"];
 var generateUUID$1 = function generateUUID() {
   return "xx-4x-yxx".replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0,
@@ -83,18 +101,18 @@ var BoolInput = function BoolInput(props) {
   var label = props.label,
     type = props.type,
     required = props.required,
-    readonly = props.readonly;
+    readonly = props.readonly,
+    rest = _objectWithoutPropertiesLoose(props, _excluded$1);
   var id = generateUUID$1();
   return React.createElement("div", {
     className: 'boolInput'
-  }, React.createElement("input", {
+  }, React.createElement("input", Object.assign({
     id: id,
     className: 'boolInput__input',
     type: type,
     required: required || false,
-    readOnly: readonly || false,
-    onChange: props.onChange
-  }), label && React.createElement("label", {
+    readOnly: readonly || false
+  }, rest)), label && React.createElement("label", {
     className: 'boolInput__label',
     htmlFor: id
   }, label));
