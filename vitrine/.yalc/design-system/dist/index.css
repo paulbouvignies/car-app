@@ -252,20 +252,6 @@ h1 {
   justify-content: center;
   align-items: flex-start;
 }
-@media (max-width: 780px) {
-  .createAccount__form__user {
-    flex-direction: column;
-    width: 100%;
-  }
-  .createAccount__form__user .baseInput {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 16px;
-  }
-  .createAccount__form .cta {
-    width: 100%;
-  }
-}
 .createAccount__form__role {
   font-family: "Abel", sans-serif;
   color: #000;

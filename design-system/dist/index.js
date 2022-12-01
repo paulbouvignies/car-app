@@ -36,15 +36,6 @@ var generateUUID = function generateUUID() {
     return v.toString(16);
   });
 };
-var style = function style(e, state) {
-  console.log(e.target.parentElement, state);
-  if (state === 'focus') {
-    e.target.parentElement.classList.add('baseInput--focus');
-  }
-  if (state === 'blur') {
-    e.target.parentElement.classList.remove('baseInput--focus');
-  }
-};
 var BaseInput = function BaseInput(props) {
   var type = props.type,
     placeholder = props.placeholder,
@@ -53,26 +44,37 @@ var BaseInput = function BaseInput(props) {
     readonly = props.readonly,
     rest = _objectWithoutPropertiesLoose(props, _excluded);
   var id = generateUUID();
+  var _React$useState = React.useState(false),
+    isFocus = _React$useState[0],
+    setIsFocus = _React$useState[1];
+  console.log(isFocus);
   return React.createElement("div", {
-    className: 'baseInput'
+    className: "baseInput  " + (isFocus ? 'baseInput--focus' : ''),
+    onFocus: function onFocus(_e) {
+      console.log("i'm here 2");
+      setIsFocus(true);
+    },
+    onBlur: function onBlur(_e) {
+      setIsFocus(false);
+    }
   }, React.createElement("label", {
     className: 'baseInput__label',
     htmlFor: id
   }, label), React.createElement("input", Object.assign({
-    className: 'baseInput__input',
+    className: "baseInput__input",
     id: id,
     type: type,
     placeholder: placeholder || "",
     required: required || false,
-    readOnly: readonly || false
-  }, rest, {
-    onFocus: function onFocus(e) {
-      style(e, 'focus');
+    readOnly: readonly || false,
+    onFocus: function onFocus(_e) {
+      console.log("i'm here");
+      setIsFocus(true);
     },
-    onBlur: function onBlur(e) {
-      style(e, 'blur');
+    onBlur: function onBlur(_e) {
+      setIsFocus(false);
     }
-  })));
+  }, rest)));
 };
 
 var BigLink = function BigLink(props) {

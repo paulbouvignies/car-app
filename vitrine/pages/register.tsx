@@ -120,7 +120,7 @@ const Register:React.FC = () => {
                             <BaseInput
                                 type="text"
                                 label="Nom"
-                                required={true}
+                                required
                                 value={userFirstName}
                                 onChange={(e) => setUserFirstName(e.target.value)}
                             />

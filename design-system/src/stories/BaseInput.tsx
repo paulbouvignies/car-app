@@ -22,22 +22,19 @@ const generateUUID = ():string => {
   });
 }
 
-const style = (e:any,state: string) => {
-  console.log(e.target.parentElement, state)
-  if (state === 'focus'){
-    e.target.parentElement.classList.add('baseInput--focus')
-  }
-  if (state === 'blur'){
-    e.target.parentElement.classList.remove('baseInput--focus')
-  }
-}
 
 export const BaseInput:React.FC<Props> = (props) => {
   const { type, placeholder, label, required, readonly, ...rest } = props;
   const id = generateUUID();
+  const [isFocus, setIsFocus] = React.useState(false);
+
+  console.log(isFocus)
 
   return (
-    <div className={ 'baseInput' }>
+    <div className={ `baseInput  ${isFocus ? 'baseInput--focus' : ''}` }
+         onFocus={(_e) => { console.log("i'm here 2"); setIsFocus(true) }}
+         onBlur={(_e) => { setIsFocus(false) }}
+    >
       <label
         className='baseInput__label'
         htmlFor={id}
@@ -45,15 +42,15 @@ export const BaseInput:React.FC<Props> = (props) => {
         {label}
       </label>
       <input
-        className='baseInput__input'
+        className={`baseInput__input`}
         id={id}
         type={type}
         placeholder={placeholder || ""}
         required={required || false}
         readOnly={readonly || false}
+        onFocus={(_e) => { console.log("i'm here"); setIsFocus(true) }}
+        onBlur={(_e) => { setIsFocus(false) }}
         {...rest}
-        onFocus={(e) => { style(e,'focus') }}
-        onBlur={(e) => { style(e, 'blur') }}
       />
     </div>
   );
