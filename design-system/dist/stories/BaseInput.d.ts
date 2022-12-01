@@ -4,7 +4,7 @@ declare type Props = {
     placeholder?: string;
     label: string;
     required?: boolean;
-    readonly?: boolean;
+    readOnly?: boolean;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     value?: string;
 };

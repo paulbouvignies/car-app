@@ -127,21 +127,21 @@ const Register:React.FC = () => {
                             <BaseInput
                                 type="text"
                                 label="Prénom"
-                                required={true}
+                                required
                                 value={userLastName}
                                 onChange={(e) => setUserLastName(e.target.value)}
                             />
                             <BaseInput
                                 type="email"
                                 label="E-mail"
-                                required={true}
+                                required
                                 value={userEmail}
                                 onChange={(e) => setUserEmail(e.target.value)}
                             />
                             <BaseInput
                                 type="tel"
                                 label="Numéro de téléphone"
-                                required={true}
+                                required
                                 value={userTel}
                                 onChange={(e) => setUserTel(e.target.value)}
                             />
@@ -149,7 +149,7 @@ const Register:React.FC = () => {
                         <BoolInput
                             type={"checkbox"}
                             label="j’atteste que je possède un permis de conduire valide."
-                            required={true}
+                            required
                             checked={userHasLicence}
                             onChange={() => setUserHasLicence(!userHasLicence)}
                         />

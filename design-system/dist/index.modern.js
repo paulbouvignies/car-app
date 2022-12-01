@@ -24,7 +24,7 @@ var BackLink = function BackLink(props) {
   }, "\u2190"), label);
 };
 
-var _excluded$1 = ["type", "placeholder", "label", "required", "readonly"];
+var _excluded$1 = ["label"];
 var generateUUID = function generateUUID() {
   return "xx-4x-yxx".replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0,
@@ -33,11 +33,7 @@ var generateUUID = function generateUUID() {
   });
 };
 var BaseInput = function BaseInput(props) {
-  var type = props.type,
-    placeholder = props.placeholder,
-    label = props.label,
-    required = props.required,
-    readonly = props.readonly,
+  var label = props.label,
     rest = _objectWithoutPropertiesLoose(props, _excluded$1);
   var id = generateUUID();
   var _React$useState = React.useState(false),
@@ -45,26 +41,14 @@ var BaseInput = function BaseInput(props) {
     setIsFocus = _React$useState[1];
   console.log(isFocus);
   return React.createElement("div", {
-    className: "baseInput  " + (isFocus ? 'baseInput--focus' : ''),
-    onFocus: function onFocus(_e) {
-      console.log("i'm here 2");
-      setIsFocus(true);
-    },
-    onBlur: function onBlur(_e) {
-      setIsFocus(false);
-    }
+    className: "baseInput  " + (isFocus ? 'baseInput--focus' : '')
   }, React.createElement("label", {
     className: 'baseInput__label',
     htmlFor: id
   }, label), React.createElement("input", Object.assign({
     className: "baseInput__input",
     id: id,
-    type: type,
-    placeholder: placeholder || "",
-    required: required || false,
-    readOnly: readonly || false,
     onFocus: function onFocus(_e) {
-      console.log("i'm here");
       setIsFocus(true);
     },
     onBlur: function onBlur(_e) {

@@ -7,7 +7,7 @@ type Props =  {
   placeholder?: string;
   label: string;
   required?: boolean;
-  readonly?: boolean;
+  readOnly?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string;
 };
@@ -24,17 +24,14 @@ const generateUUID = ():string => {
 
 
 export const BaseInput:React.FC<Props> = (props) => {
-  const { type, placeholder, label, required, readonly, ...rest } = props;
+  const { label, ...rest } = props;
   const id = generateUUID();
   const [isFocus, setIsFocus] = React.useState(false);
 
   console.log(isFocus)
 
   return (
-    <div className={ `baseInput  ${isFocus ? 'baseInput--focus' : ''}` }
-         onFocus={(_e) => { console.log("i'm here 2"); setIsFocus(true) }}
-         onBlur={(_e) => { setIsFocus(false) }}
-    >
+    <div className={ `baseInput  ${isFocus ? 'baseInput--focus' : ''}` }>
       <label
         className='baseInput__label'
         htmlFor={id}
@@ -44,11 +41,7 @@ export const BaseInput:React.FC<Props> = (props) => {
       <input
         className={`baseInput__input`}
         id={id}
-        type={type}
-        placeholder={placeholder || ""}
-        required={required || false}
-        readOnly={readonly || false}
-        onFocus={(_e) => { console.log("i'm here"); setIsFocus(true) }}
+        onFocus={(_e) => { setIsFocus(true) }}
         onBlur={(_e) => { setIsFocus(false) }}
         {...rest}
       />

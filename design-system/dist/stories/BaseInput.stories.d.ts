@@ -5,7 +5,7 @@ declare const _default: import("@storybook/csf").ComponentAnnotations<import("@s
     placeholder?: string | undefined;
     label: string;
     required?: boolean | undefined;
-    readonly?: boolean | undefined;
+    readOnly?: boolean | undefined;
     onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void) | undefined;
     value?: string | undefined;
 }>>;

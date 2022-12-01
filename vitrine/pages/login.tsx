@@ -8,13 +8,13 @@ const Login = () => {
     return (
         <main className="loginPage">
             <div className='loginPage__link'>
-                <BackLink destination="/" label="retour"/>
+                <BackLink href="/" label="retour"/>
             </div>
             <div className="loginPage__center">
                 <h1 className="loginPage__center__title">Connexion</h1>
                 <form className="loginPage__center__form" action="">
-                    <BaseInput type='text' label='identifiant' required={true}/>
-                    <BaseInput type='password' label='mot de passe' required={true}/>
+                    <BaseInput type='text' label='identifiant' required/>
+                    <BaseInput type='password' label='mot de passe' required/>
                     <Button type="submit" label="Se connecter" />
                 </form>
             </div>
