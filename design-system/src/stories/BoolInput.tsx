@@ -23,16 +23,13 @@ const generateUUID = ():string => {
 
 
 export const BoolInput:React.FC<Props> = (props) => {
-  const { label, type, required, readonly, ...rest } = props;
+  const { label, ...rest } = props;
   const id = generateUUID();
   return (
     <div className='boolInput'>
       <input
         id={id}
         className='boolInput__input'
-        type={type}
-        required={required || false}
-        readOnly={readonly || false}
         {...rest}
       />
       {label && <label className='boolInput__label' htmlFor={id}>{label}</label>}
