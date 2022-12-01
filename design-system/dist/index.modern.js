@@ -57,21 +57,16 @@ var BaseInput = function BaseInput(props) {
   }, rest)));
 };
 
+var _excluded$2 = ["label"];
 var BigLink = function BigLink(props) {
   var label = props.label,
-    destination = props.destination,
-    _props$target = props.target,
-    target = _props$target === void 0 ? "_self" : _props$target,
-    title = props.title;
-  return React.createElement("a", {
-    href: destination,
-    target: target,
-    title: title,
+    rest = _objectWithoutPropertiesLoose(props, _excluded$2);
+  return React.createElement("a", Object.assign({
     className: 'cta cta--boxed'
-  }, label);
+  }, rest), label);
 };
 
-var _excluded$2 = ["label", "type", "required", "readonly"];
+var _excluded$3 = ["label", "type", "required", "readonly"];
 var generateUUID$1 = function generateUUID() {
   return "xx-4x-yxx".replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0,
@@ -84,7 +79,7 @@ var BoolInput = function BoolInput(props) {
     type = props.type,
     required = props.required,
     readonly = props.readonly,
-    rest = _objectWithoutPropertiesLoose(props, _excluded$2);
+    rest = _objectWithoutPropertiesLoose(props, _excluded$3);
   var id = generateUUID$1();
   return React.createElement("div", {
     className: 'boolInput'
