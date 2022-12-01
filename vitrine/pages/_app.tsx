@@ -7,6 +7,7 @@ import "design-system/dist/index.css";
 import "../styles/global.css";
 
 import "../styles/header&Footer.css";
+import "../styles/Login.css";
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -14,9 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return(
       <div className="app">
         <Header/>
-        <main>
-            <Component {...pageProps} />
-        </main>
+        <Component {...pageProps} />
         <Footer/>
       </div>
   )

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "yalc:update": " yalc update && cp node_modules/design-system/dist/designSystem.scss styles/designSystem.scss"
+    "yalc:update": " yalc update && cp node_modules/design-system/dist/designSystem.scss styles/designSystem.scss && npm run dev"
   },
   "dependencies": {
     "@types/node": "18.11.9",

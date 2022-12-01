@@ -4,7 +4,7 @@ import {ComponentMeta, ComponentStory} from "@storybook/react";
 import React from "react";
 import '../style/index.css'
 export default {
-  title: 'Component Web/Form/Partial/Base Input',
+  title: 'Component Web/Form/Base Input',
   component: BaseInput,
 } as ComponentMeta<typeof BaseInput>;
 

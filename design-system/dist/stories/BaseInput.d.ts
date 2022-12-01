@@ -6,6 +6,7 @@ declare type Props = {
     required?: boolean;
     readonly?: boolean;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    value?: string;
 };
 export declare const BaseInput: React.FC<Props>;
 export {};

@@ -5,7 +5,7 @@ import React from "react";
 import '../style/index.css'
 
 export default {
-  title: 'Component Web/Form/Partial/Boolean Input',
+  title: 'Component Web/Form/Boolean Input',
   component: BoolInput,
 } as ComponentMeta<typeof BoolInput>;
 

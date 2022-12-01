@@ -29,6 +29,16 @@ var BaseInput = function BaseInput(props) {
     required = props.required,
     readonly = props.readonly;
   var id = generateUUID();
+  var _React$useState = React.useState(props.value || ""),
+    value = _React$useState[0],
+    setValue = _React$useState[1];
+  var handleChange = function handleChange(event) {
+    console.log(event.target.value);
+    setValue(event.target.value);
+    if (props.onChange) {
+      props.onChange(event);
+    }
+  };
   return React.createElement("div", {
     className: 'baseInput'
   }, React.createElement("label", {
@@ -38,11 +48,13 @@ var BaseInput = function BaseInput(props) {
     className: 'baseInput__input',
     id: id,
     type: type,
-    value: '',
     placeholder: placeholder || "",
     required: required || false,
     readOnly: readonly || false,
-    onChange: props.onChange
+    value: value,
+    onChange: function onChange(e) {
+      handleChange(e);
+    }
   }));
 };
 

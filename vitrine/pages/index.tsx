@@ -7,7 +7,7 @@ const Home = () => {
   return (
       <main>
         <h1>Home</h1>
-          <Link href="/login">Login</Link>
+          <Link href="/register">Login</Link>
       </main>
   )
 }

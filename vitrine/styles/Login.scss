@@ -1,0 +1,12 @@
+
+@import "./designSystem.scss";
+
+.loginPage{
+  @include flex(column, center, center);
+  .heroBanner{
+    width: 100%;
+  }
+  .createAccount{
+    margin: 32px 0 80px 0;
+  }
+}
