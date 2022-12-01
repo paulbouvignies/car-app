@@ -2,19 +2,6 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = _interopDefault(require('react'));
 
-var BackLink = function BackLink(props) {
-  var label = props.label,
-    destination = props.destination,
-    title = props.title;
-  return React.createElement("a", {
-    href: destination,
-    title: title,
-    className: 'cta cta--goBack'
-  }, React.createElement("span", {
-    className: "cta--goBack__arrow"
-  }, "\u2190"), label);
-};
-
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {};
   var target = {};
@@ -28,7 +15,18 @@ function _objectWithoutPropertiesLoose(source, excluded) {
   return target;
 }
 
-var _excluded = ["type", "placeholder", "label", "required", "readonly"];
+var _excluded = ["label"];
+var BackLink = function BackLink(props) {
+  var label = props.label,
+    rest = _objectWithoutPropertiesLoose(props, _excluded);
+  return React.createElement("a", Object.assign({
+    className: 'cta cta--goBack'
+  }, rest), React.createElement("span", {
+    className: "cta--goBack__arrow"
+  }, "\u2190"), label);
+};
+
+var _excluded$1 = ["type", "placeholder", "label", "required", "readonly"];
 var generateUUID = function generateUUID() {
   return "xx-4x-yxx".replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0,
@@ -42,7 +40,7 @@ var BaseInput = function BaseInput(props) {
     label = props.label,
     required = props.required,
     readonly = props.readonly,
-    rest = _objectWithoutPropertiesLoose(props, _excluded);
+    rest = _objectWithoutPropertiesLoose(props, _excluded$1);
   var id = generateUUID();
   var _React$useState = React.useState(false),
     isFocus = _React$useState[0],
@@ -91,7 +89,7 @@ var BigLink = function BigLink(props) {
   }, label);
 };
 
-var _excluded$1 = ["label", "type", "required", "readonly"];
+var _excluded$2 = ["label", "type", "required", "readonly"];
 var generateUUID$1 = function generateUUID() {
   return "xx-4x-yxx".replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0,
@@ -104,7 +102,7 @@ var BoolInput = function BoolInput(props) {
     type = props.type,
     required = props.required,
     readonly = props.readonly,
-    rest = _objectWithoutPropertiesLoose(props, _excluded$1);
+    rest = _objectWithoutPropertiesLoose(props, _excluded$2);
   var id = generateUUID$1();
   return React.createElement("div", {
     className: 'boolInput'

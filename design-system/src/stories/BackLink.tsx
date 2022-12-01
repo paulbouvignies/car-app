@@ -4,17 +4,15 @@ import React from "react";
 
 type Props = {
   label: string;
-  destination: string;
-  title?: string;
+  href: string;
 }
 
 export const BackLink:React.FC<Props> = (props) => {
-  const { label, destination, title } = props;
+  const { label, ...rest } = props;
   return(
     <a
-      href={destination}
-      title={title}
       className='cta cta--goBack'
+      {...rest}
     ><span className="cta--goBack__arrow">←</span>{label}</a>
   )
 }
