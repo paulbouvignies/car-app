@@ -13,6 +13,6 @@ export const footer_link = Template.bind({});
 footer_link.args = {
   label: "about us",
   target: "_blank",
-  destination: "https://www.google.com",
+  href: "https://www.google.com",
   title: "link to the about us page",
 }

@@ -5,8 +5,8 @@ import {FooterLink} from "design-system";
 const Footer = () => {
     return (
         <footer className="footer">
-            <FooterLink label="Contact " destination="" />
-            <FooterLink label="Conditions générales pdf" destination="" />
+            <FooterLink label="Contact " href="" />
+            <FooterLink label="Conditions générales pdf" href="" />
             <p className="footer__credential">RIDE 2022 - tout droits reservés</p>
         </footer>
     );

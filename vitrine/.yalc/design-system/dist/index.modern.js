@@ -66,7 +66,7 @@ var BigLink = function BigLink(props) {
   }, rest), label);
 };
 
-var _excluded$3 = ["label", "type", "required", "readonly"];
+var _excluded$3 = ["label"];
 var generateUUID$1 = function generateUUID() {
   return "xx-4x-yxx".replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0,
@@ -76,19 +76,13 @@ var generateUUID$1 = function generateUUID() {
 };
 var BoolInput = function BoolInput(props) {
   var label = props.label,
-    type = props.type,
-    required = props.required,
-    readonly = props.readonly,
     rest = _objectWithoutPropertiesLoose(props, _excluded$3);
   var id = generateUUID$1();
   return React.createElement("div", {
     className: 'boolInput'
   }, React.createElement("input", Object.assign({
     id: id,
-    className: 'boolInput__input',
-    type: type,
-    required: required || false,
-    readOnly: readonly || false
+    className: 'boolInput__input'
   }, rest)), label && React.createElement("label", {
     className: 'boolInput__label',
     htmlFor: id
@@ -116,18 +110,13 @@ var Button = function Button(props) {
   }
 };
 
+var _excluded$4 = ["label"];
 var FooterLink = function FooterLink(props) {
   var label = props.label,
-    destination = props.destination,
-    _props$target = props.target,
-    target = _props$target === void 0 ? "_self" : _props$target,
-    title = props.title;
-  return React.createElement("a", {
-    href: destination,
-    target: target,
-    title: title,
+    rest = _objectWithoutPropertiesLoose(props, _excluded$4);
+  return React.createElement("a", Object.assign({
     className: 'cta cta--footerType'
-  }, label);
+  }, rest), label);
 };
 
 var getFormatedContent = function getFormatedContent(content) {
