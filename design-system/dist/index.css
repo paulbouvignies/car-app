@@ -45,9 +45,47 @@ h1 {
 /**************************
 // MIXINS
 **************************/
-.baseInput {
+.baseInput--- {
   position: relative;
   padding: 16px;
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.baseInput---::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #C00000;
+  transition: all 0.3s ease;
+}
+.baseInput-----focus::after {
+  width: 100%;
+}
+.baseInput---__label {
+  font-family: "Roboto", sans-serif;
+  color: #2D2D2D;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+.baseInput---__input {
+  width: 100%;
+  font-family: "Abel", sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  color: #C00000;
+}
+
+.baseInput {
+  position: relative;
   background-color: #F9F9F9;
   display: flex;
   flex-direction: column;
@@ -74,14 +112,31 @@ h1 {
   font-size: 13px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.5019607843);
+  position: absolute;
+  left: 16px;
+  top: 13px;
 }
 .baseInput__input {
+  padding: 29px 16px 16px 16px;
   width: 100%;
   font-family: "Abel", sans-serif;
   color: #000;
   font-size: 16px;
   font-weight: 400;
   color: #C00000;
+}
+.baseInput__password {
+  position: absolute;
+  right: 16px;
+  top: 28px;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+}
+.baseInput__password #hide {
+  display: none;
 }
 
 .boolInput {

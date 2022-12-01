@@ -1,7 +1,7 @@
 
 
 
-.baseInput{
+.baseInput---{
   position: relative;
   padding: 16px;
   background-color: $secondary-white;
@@ -25,12 +25,58 @@
   &__label{
     @include legendFont;
     color: #00000080;
-
   }
   &__input{
     width: 100%;
     @include textFont;
     color: $primary-red ;
+  }
+}
 
+.baseInput{
+  position: relative;
+  background-color: $secondary-white;
+  &::after{
+    content: '';
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $primary-red;
+    transition: all 0.3s ease;
+  }
+  &--focus{
+    &::after{
+      width: 100%;
+    }
+  }
+  @include flex(column, flex-start, flex-start);
+  &__label{
+    @include legendFont;
+    color: #00000080;
+    position: absolute;
+    left: 16px;
+    top: 13px;
+  }
+  &__input{
+    padding: 29px 16px 16px 16px;
+    width: 100%;
+    @include textFont;
+    color: $primary-red ;
+  }
+  &__password{
+    position: absolute;
+    right: 16px;
+    top: 28px;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    #hide{
+      display: none;
+    }
   }
 }
