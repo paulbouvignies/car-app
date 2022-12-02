@@ -8,7 +8,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/paulbouvignies/car-app)
 ![GitHub](https://img.shields.io/github/license/paulbouvignies/car-app)
 ![GitHub top language](https://img.shields.io/github/languages/top/paulbouvignies/car-app)
-
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/paulbouvignies/car-app/Deploy%20Next.js%20site%20to%20Pages)
 
 ## Installing / Getting started
 
