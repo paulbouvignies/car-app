@@ -35,8 +35,9 @@
   ],
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "design-system": "^2.5.0",
     "node-sass": "^8.0.0",
     "yalc": "^1.0.0-pre.53"
   },
-  "yalcSig": "0131b71b5a73fd85f59bdff91fc03b84"
+  "yalcSig": "41a2f605d882c4b3f9d7f0bec4c4ea67"
 }

@@ -6519,6 +6519,11 @@
     "inherits" "^2.0.1"
     "minimalistic-assert" "^1.0.0"
 
+"design-system@^2.5.0":
+  "integrity" "sha512-jkrF0xgaRAqJzCb5WXi5HOQ1W4KyHgpEZYqvPDOL+ziVoGQVJDNcOIvaoiw/PqI0U5CYc1Al1YP/D3Md6vMQVg=="
+  "resolved" "https://registry.npmjs.org/design-system/-/design-system-2.5.0.tgz"
+  "version" "2.5.0"
+
 "destroy@1.2.0":
   "integrity" "sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg=="
   "resolved" "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz"

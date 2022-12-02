@@ -79,6 +79,7 @@
   ],
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "design-system": "^2.5.0",
     "node-sass": "^8.0.0",
     "yalc": "^1.0.0-pre.53"
   }
