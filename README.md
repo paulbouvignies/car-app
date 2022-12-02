@@ -7,6 +7,8 @@
 ![GitHub issues](https://img.shields.io/github/issues/paulbouvignies/car-app)
 ![GitHub last commit](https://img.shields.io/github/last-commit/paulbouvignies/car-app)
 ![GitHub](https://img.shields.io/github/license/paulbouvignies/car-app)
+![GitHub top language](https://img.shields.io/github/languages/top/paulbouvignies/car-app)
+
 
 ## Installing / Getting started
 
