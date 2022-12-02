@@ -1,0 +1,12 @@
+{
+  "name": "car-app",
+  "version": "1.0.0",
+  "scripts": {
+    "install:vitrine": "npm install --prefix vitrine && yarn install --prefix vitrine",
+    "install:storybook": "npm install --prefix design-system",
+    "serve:vitrine": "npm run dev --prefix vitrine",
+    "serve:storybook": "cd design-system && npm run storybook",
+    "install:all": " npm run install:vitrine && npm run install:storybook"
+  }
+}
+
