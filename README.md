@@ -1,6 +1,5 @@
 ![Logo of the project](./assets-readme/brand.png)
-# Ride Desktop
-_____
+# Ride Car
 
 
 > FullStack Course - YNOV M1 INFO
@@ -10,7 +9,7 @@ _____
 ![GitHub](https://img.shields.io/github/license/paulbouvignies/car-app)
 
 ## Installing / Getting started
-_____
+
 ### Front: 
 ```bash
 cd vitrine
@@ -29,7 +28,7 @@ Now you can access the storybook on http://localhost:6006
 
 
 ## Design 
-_____
+
 This project use [Figma](https://www.figma.com) to design the interface.<br>
 Find the design [here](https://www.figma.com/file/g8RWbQyy4lqxbeOQBeYsV7/Gamos-2022---JoAzCo?node-id=13%3A1509&t=Lzh4GlVoPbnHqsnO-1)
 
