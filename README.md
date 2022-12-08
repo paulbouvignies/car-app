@@ -12,21 +12,18 @@
 
 ## Installing / Getting started
 
-### Front: 
 ```bash
-cd vitrine
-npm install
-npm run dev
+npm run install:all
 ```
-Now you can access the front on http://localhost:3000
+That will install all the dependencies for storybook, vitrine and make storybook add
 
-### Storybook
 ```bash
-cd design-system
-npm install
-npm run storybook
+npm run serve:storybook
+npm run serve:vitrine
 ```
 Now you can access the storybook on http://localhost:6006
+
+And the vitrine on http://localhost:3000
 
 
 ## Design 
